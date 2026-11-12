@@ -1,0 +1,6 @@
+{
+  "name": "Practical Centre Student Portal",
+  "description": "Comprehensive student and administrative portal for Practical Centre coaching institute in Karachi, featuring attendance automation, parent SMS alerts, weekly reports, study material, and time-lock capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
