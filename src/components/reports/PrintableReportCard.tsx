@@ -44,7 +44,7 @@ export const PrintableReportCard: React.FC<PrintableReportCardProps> = ({
                 Academic Evaluation & Board Preparation Assessment
               </p>
               <p className="text-[11px] text-slate-500 mt-0.5">
-                Gulshan-e-Iqbal Block 1 & PECHS Campuses, Karachi, Pakistan
+                Gulshan-e-Iqbal Block 1 Campus, Karachi, Pakistan
               </p>
             </div>
           </div>

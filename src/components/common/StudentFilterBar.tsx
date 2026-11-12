@@ -4,7 +4,7 @@ import { ClassLevel, ShiftType, CohortType, StreamType } from '../../types';
 
 export interface FilterCriteria {
   classLevel: string; // 'All' | ClassLevel
-  shift: string;      // 'All' | 'Day' | 'Evening'
+  shift: string;      // 'All' | 'Morning' | 'Evening'
   cohort: string;     // 'All' | 'Male' | 'Female'
   stream: string;     // 'All' | StreamType
   section: string;    // 'All' | 'A' | 'A1' | 'A2' | 'C' | 'C1' | 'C2'
@@ -30,7 +30,7 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
     // If shift changed, reset section if it's no longer compatible with the shift rule
     let nextSection = filters.section;
     if (key === 'shift') {
-      if (value === 'Day' && nextSection.startsWith('C')) {
+      if (value === 'Morning' && nextSection.startsWith('C')) {
         nextSection = 'All';
       } else if (value === 'Evening' && nextSection.startsWith('A')) {
         nextSection = 'All';
@@ -63,13 +63,13 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
     filters.searchQuery.trim() !== '';
 
   // Institutional Section Rule:
-  // Day shift students always start from A (A, A1, A2...)
+  // Morning shift students always start from A (A, A1, A2...)
   // Night / Evening shift students always start from C (C, C1, C2...)
   const daySections = ['A', 'A1', 'A2'];
   const nightSections = ['C', 'C1', 'C2', 'C3'];
 
   let availableSections: string[] = [];
-  if (filters.shift === 'Day') {
+  if (filters.shift === 'Morning') {
     availableSections = daySections;
   } else if (filters.shift === 'Evening') {
     availableSections = nightSections;
@@ -131,7 +131,7 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
           </select>
         </div>
 
-        {/* 2. Shift (Day / Night) */}
+        {/* 2. Shift (Morning / Night) */}
         <div className="space-y-1">
           <label className="font-bold text-slate-600 uppercase tracking-wider text-[10px] flex items-center gap-1">
             2. Shift
@@ -142,7 +142,7 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
             className="w-full px-2.5 py-2 rounded-xl border border-slate-300 bg-slate-50 font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0B4F9C] focus:bg-white"
           >
             <option value="All">All Shifts</option>
-            <option value="Day">Day Shift (15:20 – 18:00)</option>
+            <option value="Morning">Morning Shift (15:20 – 18:00)</option>
             <option value="Evening">Night Shift (18:20 – 21:00)</option>
           </select>
         </div>
@@ -182,12 +182,12 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
           </select>
         </div>
 
-        {/* 5. Section (Day starts with A, Night starts with C) */}
+        {/* 5. Section (Morning starts with A, Night starts with C) */}
         <div className="space-y-1">
           <label className="font-bold text-slate-600 uppercase tracking-wider text-[10px] flex items-center justify-between">
             <span>5. Section</span>
             <span className="text-[9px] text-[#0B4F9C] font-normal">
-              {filters.shift === 'Day' ? 'Starts with A' : filters.shift === 'Evening' ? 'Starts with C' : 'A or C'}
+              {filters.shift === 'Morning' ? 'Starts with A' : filters.shift === 'Evening' ? 'Starts with C' : 'A or C'}
             </span>
           </label>
           <select
@@ -198,7 +198,7 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
             <option value="All">All Sections</option>
             {availableSections.map((sec) => (
               <option key={sec} value={sec}>
-                Section {sec} {sec.startsWith('A') ? '(Day)' : '(Night)'}
+                Section {sec} {sec.startsWith('A') ? '(Morning)' : '(Night)'}
               </option>
             ))}
           </select>
@@ -226,7 +226,7 @@ export const StudentFilterBar: React.FC<StudentFilterBarProps> = ({
       <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] text-slate-500">
         <span className="font-semibold text-slate-700">Institutional Section Rule:</span>
         <span className="inline-flex items-center gap-1 bg-blue-50 text-[#0B4F9C] px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-blue-200">
-          Day Shift = Sections A, A1, A2...
+          Morning Shift = Sections A, A1, A2...
         </span>
         <span className="inline-flex items-center gap-1 bg-indigo-50 text-indigo-800 px-2 py-0.5 rounded font-mono text-[10px] font-bold border border-indigo-200">
           Night Shift = Sections C, C1, C2...

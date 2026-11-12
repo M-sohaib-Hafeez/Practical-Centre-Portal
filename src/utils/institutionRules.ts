@@ -51,7 +51,7 @@ export function isCohortDayValid(dateInput: Date | string, cohort: CohortType): 
 
 /**
  * Calculates student arrival status based on cutoff rule:
- * Day shift: 15:20 start. Cutoff 15:40. Arrivals after 15:40 are "Late".
+ * Morning shift: 15:20 start. Cutoff 15:40. Arrivals after 15:40 are "Late".
  * Evening shift: 18:20 start. Cutoff 18:40. Arrivals after 18:40 are "Late".
  */
 export function calculateAttendanceStatus(
@@ -61,9 +61,9 @@ export function calculateAttendanceStatus(
   const [hours, minutes] = timeStringHHMM.split(':').map(Number);
   const arrivalMinutes = hours * 60 + (minutes || 0);
 
-  // Day shift starts 15:20 (920 min). 20-min grace = 15:40 (940 min)
+  // Morning shift starts 15:20 (920 min). 20-min grace = 15:40 (940 min)
   // Evening shift starts 18:20 (1100 min). 20-min grace = 18:40 (1120 min)
-  if (shift === 'Day') {
+  if (shift === 'Morning') {
     const cutoffMinutes = 15 * 60 + 40; // 15:40
     return arrivalMinutes <= cutoffMinutes ? 'Present' : 'Late';
   } else {

@@ -114,7 +114,7 @@ interface DemoDataContextType {
   resetDemoData: () => void;
 }
 
-const STORAGE_KEY = 'pc_student_portal_state_v1';
+const STORAGE_KEY = 'pc_student_portal_state_v2';
 
 const DemoDataContext = createContext<DemoDataContextType | undefined>(undefined);
 

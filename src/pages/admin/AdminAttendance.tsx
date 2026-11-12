@@ -23,12 +23,12 @@ export const AdminAttendance: React.FC = () => {
   const { showToast } = useToast();
 
   const [date, setDate] = useState('2026-11-10'); // Tuesday (Male cohort day)
-  const [shift, setShift] = useState<ShiftType>('Day');
+  const [shift, setShift] = useState<ShiftType>('Morning');
   const [section, setSection] = useState<string>('All');
   const [activeTab, setActiveTab] = useState<'mac' | 'scanner' | 'roster'>('mac');
 
   // Check cohort day validity
-  const currentCohort: CohortType = shift === 'Day' ? 'Male' : 'Female';
+  const currentCohort: CohortType = shift === 'Morning' ? 'Male' : 'Female';
   const cohortCheck = isCohortDayValid(date, currentCohort);
 
   // Filter students for chosen shift & section
@@ -136,7 +136,7 @@ export const AdminAttendance: React.FC = () => {
             }}
             className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-slate-50 font-medium"
           >
-            <option value="Day">Day Shift: 15:20 – 18:00 (Cutoff 15:40 • Sec A, A1, A2)</option>
+            <option value="Morning">Morning Shift: 15:20 – 18:00 (Cutoff 15:40 • Sec A, A1, A2)</option>
             <option value="Evening">Night Shift: 18:20 – 21:00 (Cutoff 18:40 • Sec C, C1, C2)</option>
           </select>
         </div>
@@ -151,7 +151,7 @@ export const AdminAttendance: React.FC = () => {
             className="w-full px-3 py-2 rounded-xl border border-slate-300 bg-slate-50 font-medium"
           >
             <option value="All">All Sections in {shift} Shift</option>
-            {shift === 'Day' ? (
+            {shift === 'Morning' ? (
               <>
                 <option value="A1">Section A1 (Pre-Engineering)</option>
                 <option value="A2">Section A2 (Pre-Medical)</option>

@@ -36,9 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemoGuide }) => {
     if (student) {
       if (n.audience === 'Male cohort' && student.cohort === 'Male') return true;
       if (n.audience === 'Female cohort' && student.cohort === 'Female') return true;
-      if (n.audience === 'Day shift' && student.shift === 'Day') return true;
+      if (n.audience === 'Morning shift' && student.shift === 'Morning') return true;
       if (n.audience === 'Evening shift' && student.shift === 'Evening') return true;
-      if (n.audience === 'PECHS campus' && student.campus.includes('PECHS')) return true;
       if (n.audience === 'Gulshan campus' && student.campus.includes('Gulshan')) return true;
     }
     return false;
@@ -309,22 +308,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDemoGuide }) => {
                   <span>Logout</span>
                 </button>
               </div>
-            ) : (
-              <div className="flex items-center gap-1.5">
-                <Link
-                  to="/student-login"
-                  className="text-xs font-semibold text-blue-900 hover:bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200 transition-colors"
-                >
-                  Student Login
-                </Link>
-                <Link
-                  to="/admin-login"
-                  className="text-xs font-semibold bg-blue-950 hover:bg-blue-900 text-white px-3 py-1.5 rounded-lg transition-colors shadow-xs"
-                >
-                  Admin Login
-                </Link>
-              </div>
-            )}
+            ) : null}
 
             {/* Mobile Menu Toggle */}
             <button

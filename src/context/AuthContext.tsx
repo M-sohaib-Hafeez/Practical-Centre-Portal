@@ -36,7 +36,7 @@ interface AuthContextType {
   switchUser: (type: 'admin' | 'student', studentId?: string) => void;
 }
 
-const AUTH_STORAGE_KEY = 'pc_portal_auth_session_v1';
+const AUTH_STORAGE_KEY = 'pc_portal_auth_session_v2';
 export const DEMO_ADMIN_OTP = '482913';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -209,7 +209,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         name: 'Prof. Rashid Khan',
         email: pendingAdminEmail,
         role: 'admin',
-        campus: 'Central Administration (Gulshan & PECHS)',
+        campus: 'Central Administration (Gulshan-e-Iqbal Block 1)',
         designation: 'Head of Academics & Student Affairs',
       };
 
@@ -253,7 +253,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           name: 'Prof. Rashid Khan',
           email: 'admin@practicalcentre.edu.pk',
           role: 'admin',
-          campus: 'Central Administration (Gulshan & PECHS)',
+          campus: 'Central Administration (Gulshan-e-Iqbal Block 1)',
           designation: 'Head of Academics & Student Affairs',
         };
         setRole('admin');

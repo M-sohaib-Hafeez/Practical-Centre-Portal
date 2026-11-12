@@ -60,7 +60,7 @@ export const AdminNotifications: React.FC = () => {
             Campus Broadcast & Notification Manager
           </h1>
           <p className="text-xs text-slate-500">
-            Dispatch institute circulars with audience targeting (Cohort, Shift, or Campuses).
+            Dispatch institute circulars with audience targeting (Cohort, Shift, or Campus).
           </p>
         </div>
         <span className="text-xs font-mono font-bold text-blue-900 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 self-start md:self-auto">
@@ -117,13 +117,12 @@ export const AdminNotifications: React.FC = () => {
                 onChange={(e) => setAudience(e.target.value as NotificationAudience)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50/50 text-xs font-medium"
               >
-                <option value="All">All Students & Faculty (All Campuses)</option>
+                <option value="All">All Students & Faculty</option>
                 <option value="Male cohort">Male Cohort (Mon–Wed Only)</option>
                 <option value="Female cohort">Female Cohort (Thu–Sat Only)</option>
-                <option value="Day shift">Day Shift Students (15:20 – 18:00)</option>
+                <option value="Morning shift">Morning Shift Students (15:20 – 18:00)</option>
                 <option value="Evening shift">Evening Shift Students (18:20 – 21:00)</option>
                 <option value="Gulshan campus">Gulshan-e-Iqbal Block 1 Campus</option>
-                <option value="PECHS campus">PECHS Block 2 Campus</option>
               </select>
             </div>
 
