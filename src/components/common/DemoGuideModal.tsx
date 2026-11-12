@@ -130,7 +130,7 @@ export const DemoGuideModal: React.FC<DemoGuideModalProps> = ({ isOpen, onClose 
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-xs text-slate-900">M. Sohaib Hafeez</span>
                     <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">
-                      Day • Male
+                      Morning • Male
                     </span>
                   </div>
                   <p className="text-xs font-mono font-semibold text-slate-700 mt-1">PC-2026-A1-042</p>
@@ -165,7 +165,7 @@ export const DemoGuideModal: React.FC<DemoGuideModalProps> = ({ isOpen, onClose 
                     </span>
                   </div>
                   <p className="text-xs font-mono font-semibold text-slate-700 mt-1">PC-2026-C1-019</p>
-                  <p className="text-[11px] text-slate-500">Class XII CS (PECHS)</p>
+                  <p className="text-[11px] text-slate-500">Class XII CS (Gulshan)</p>
                 </div>
                 <div className="mt-3 flex gap-2">
                   <button
@@ -215,7 +215,7 @@ export const DemoGuideModal: React.FC<DemoGuideModalProps> = ({ isOpen, onClose 
                 <div>
                   <p className="font-semibold text-slate-900">Attendance: Wi-Fi MAC Detection & Scanner</p>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    Go to <strong>Admin Attendance</strong>. Test <em>Wi-Fi Gateway Simulator</em> to detect devices by MAC address, or <em>Barcode Scanner</em>. Notice cohort validation (Mon–Wed for males, Thu–Sat for females) and the 20-minute late arrival cutoff rule (15:40 Day / 18:40 Evening).
+                    Go to <strong>Admin Attendance</strong>. Test <em>Wi-Fi Gateway Simulator</em> to detect devices by MAC address, or <em>Barcode Scanner</em>. Notice cohort validation (Mon–Wed for males, Thu–Sat for females) and the 20-minute late arrival cutoff rule (15:40 Morning / 18:40 Evening).
                   </p>
                 </div>
               </div>

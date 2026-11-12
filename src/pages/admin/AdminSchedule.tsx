@@ -16,14 +16,14 @@ export const AdminSchedule: React.FC = () => {
   const { timetable, upcomingTests, addUpcomingTest } = useDemoData();
   const { showToast } = useToast();
 
-  const [filterShift, setFilterShift] = useState<ShiftType>('Day');
+  const [filterShift, setFilterShift] = useState<ShiftType>('Morning');
 
   // Test form state
   const [subject, setSubject] = useState('Physics');
   const [stream, setStream] = useState<StreamType>('Pre-Engineering');
   const [classLevel, setClassLevel] = useState<ClassLevel>('Class XII');
   const [date, setDate] = useState('2026-11-19');
-  const [testShift, setTestShift] = useState<ShiftType>('Day');
+  const [testShift, setTestShift] = useState<ShiftType>('Morning');
   const [cohort, setCohort] = useState<CohortType>('Male');
   const [topics, setTopics] = useState('');
   const [totalMarks, setTotalMarks] = useState(50);
@@ -74,14 +74,14 @@ export const AdminSchedule: React.FC = () => {
         <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
           <button
             type="button"
-            onClick={() => setFilterShift('Day')}
+            onClick={() => setFilterShift('Morning')}
             className={`px-3 py-1.5 rounded-lg transition-colors ${
-              filterShift === 'Day'
+              filterShift === 'Morning'
                 ? 'bg-white text-blue-900 shadow-xs font-bold'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Day Shift (15:20 – 18:00)
+            Morning Shift (15:20 – 18:00)
           </button>
           <button
             type="button"
@@ -169,7 +169,7 @@ export const AdminSchedule: React.FC = () => {
                   onChange={(e) => setTestShift(e.target.value as ShiftType)}
                   className="w-1/2 px-2 py-2 rounded-xl border border-slate-300 bg-slate-50 font-medium"
                 >
-                  <option value="Day">Day</option>
+                  <option value="Morning">Morning</option>
                   <option value="Evening">Eve</option>
                 </select>
               </div>

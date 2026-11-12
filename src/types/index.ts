@@ -1,8 +1,8 @@
-export type ShiftType = 'Day' | 'Evening';
+export type ShiftType = 'Morning' | 'Evening';
 export type CohortType = 'Male' | 'Female';
 export type StreamType = 'Pre-Engineering' | 'Pre-Medical' | 'Computer Science' | 'Commerce' | 'Matric Science';
 export type ClassLevel = 'Class IX' | 'Class X' | 'Class XI' | 'Class XII';
-export type CampusLocation = 'Gulshan-e-Iqbal Block 1' | 'PECHS Campus';
+export type CampusLocation = 'Gulshan-e-Iqbal Block 1';
 
 export interface Student {
   id: string; // e.g. PC-2026-A1-042
@@ -13,7 +13,7 @@ export interface Student {
   gender: 'Male' | 'Female';
   cohort: CohortType;
   shift: ShiftType;
-  section: string; // Day: A, A1, A2... | Evening: C, C1, C2...
+  section: string; // Morning: A, A1, A2... | Evening: C, C1, C2...
   classLevel: ClassLevel;
   stream: StreamType;
   campus: CampusLocation;
@@ -77,7 +77,7 @@ export interface StudentReport {
 }
 
 export type NotificationCategory = 'Holiday' | 'Exam' | 'Announcement' | 'Attendance';
-export type NotificationAudience = 'All' | 'Male cohort' | 'Female cohort' | 'Day shift' | 'Evening shift' | 'PECHS campus' | 'Gulshan campus';
+export type NotificationAudience = 'All' | 'Male cohort' | 'Female cohort' | 'Morning shift' | 'Evening shift' | 'Gulshan campus';
 
 export interface NotificationItem {
   id: string;

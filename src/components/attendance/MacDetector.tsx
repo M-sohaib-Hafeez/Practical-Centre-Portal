@@ -85,7 +85,7 @@ export const MacDetector: React.FC<MacDetectorProps> = ({ date, shift, section }
       return;
     }
 
-    const arrivalTime = shift === 'Day' ? '15:28' : '18:25';
+    const arrivalTime = shift === 'Morning' ? '15:28' : '18:25';
     const status = calculateAttendanceStatus(arrivalTime, shift);
 
     const records: Omit<AttendanceRecord, 'id' | 'markedAt'>[] = selected.map((d) => ({

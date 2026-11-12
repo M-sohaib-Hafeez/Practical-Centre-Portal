@@ -48,7 +48,7 @@ export const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ date, shift, sec
     const now = new Date();
     const timeHHMM = now.toTimeString().substring(0, 5); // e.g. "15:32" or "18:45"
     // Use realistic simulated shift time if outside shift window
-    const effectiveTime = shift === 'Day' ? '15:34' : '18:28';
+    const effectiveTime = shift === 'Morning' ? '15:34' : '18:28';
 
     if (!matched) {
       setScanResult({

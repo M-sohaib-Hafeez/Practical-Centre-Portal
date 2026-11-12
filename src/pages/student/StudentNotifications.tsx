@@ -28,9 +28,8 @@ export const StudentNotifications: React.FC = () => {
     if (n.audience === 'All') return true;
     if (n.audience === 'Male cohort' && student.cohort === 'Male') return true;
     if (n.audience === 'Female cohort' && student.cohort === 'Female') return true;
-    if (n.audience === 'Day shift' && student.shift === 'Day') return true;
+    if (n.audience === 'Morning shift' && student.shift === 'Morning') return true;
     if (n.audience === 'Evening shift' && student.shift === 'Evening') return true;
-    if (n.audience === 'PECHS campus' && student.campus.includes('PECHS')) return true;
     if (n.audience === 'Gulshan campus' && student.campus.includes('Gulshan')) return true;
     return false;
   });

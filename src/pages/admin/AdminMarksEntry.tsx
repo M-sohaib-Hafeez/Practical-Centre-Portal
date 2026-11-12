@@ -22,7 +22,7 @@ export const AdminMarksEntry: React.FC = () => {
   // Filter State
   const [filters, setFilters] = useState<FilterCriteria>({
     classLevel: 'Class XII',
-    shift: 'Day',
+    shift: 'Morning',
     cohort: 'All',
     stream: 'Pre-Engineering',
     section: 'A1',
@@ -346,7 +346,7 @@ export const AdminMarksEntry: React.FC = () => {
                           Sec {st.section}
                         </span>
                         <span className="block text-[10px] text-slate-500 mt-0.5">
-                          {st.shift} ({st.shift === 'Day' ? '15:20-18:00' : '18:20-21:00'})
+                          {st.shift} ({st.shift === 'Morning' ? '15:20-18:00' : '18:20-21:00'})
                         </span>
                       </td>
 

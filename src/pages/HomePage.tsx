@@ -160,7 +160,7 @@ export const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/60 flex items-center justify-between">
                     <div>
-                      <p className="text-[11px] font-bold text-slate-500 uppercase">Day Shift (Sec A, A1, A2)</p>
+                      <p className="text-[11px] font-bold text-slate-500 uppercase">Morning Shift (Sec A, A1, A2)</p>
                       <p className="font-bold text-slate-900 text-xs mt-0.5">15:20 – 18:00 (Cutoff 15:40)</p>
                     </div>
                     <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">
@@ -189,7 +189,7 @@ export const HomePage: React.FC = () => {
 
                 <div className="pt-2 text-center">
                   <p className="text-xs text-slate-500">
-                    Campuses in <strong>Gulshan-e-Iqbal Block 1</strong> & <strong>PECHS Block 2</strong>
+                    Campus at <strong>Gulshan-e-Iqbal Block 1, Karachi</strong>
                   </p>
                 </div>
               </div>
@@ -406,28 +406,17 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Campus Info Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 space-y-2">
-                <div className="flex items-center gap-2 text-teal-300 font-bold">
+            {/* Campus Info Box */}
+            <div className="grid grid-cols-1 gap-4 text-xs">
+              <div className="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 space-y-2">
+                <div className="flex items-center gap-2 text-teal-300 font-bold text-sm">
                   <MapPin className="w-4 h-4" />
-                  <span>Gulshan-e-Iqbal Campus</span>
+                  <span>Gulshan-e-Iqbal Campus (Block 1)</span>
                 </div>
-                <p className="text-slate-300 text-[11px] leading-relaxed">
-                  Block 1, Near Disco Bakery, Main Allama Shabbir Ahmed Usmani Road, Karachi.
+                <p className="text-slate-300 text-xs leading-relaxed">
+                  Plot B-14, Block 1, Near Disco Bakery, Main Allama Shabbir Ahmed Usmani Road, Karachi.
                 </p>
                 <p className="text-white font-mono font-semibold pt-1">(021) 3498-4412</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 space-y-2">
-                <div className="flex items-center gap-2 text-teal-300 font-bold">
-                  <MapPin className="w-4 h-4" />
-                  <span>PECHS Campus</span>
-                </div>
-                <p className="text-slate-300 text-[11px] leading-relaxed">
-                  Block 2 PECHS, Main Sharea Faisal, Near Nursery Flyover, Karachi.
-                </p>
-                <p className="text-white font-mono font-semibold pt-1">(021) 3455-7890</p>
               </div>
             </div>
           </div>

@@ -28,7 +28,6 @@ import { StudentReports } from './pages/student/StudentReports';
 import { StudentSchedule } from './pages/student/StudentSchedule';
 import { StudentNotifications } from './pages/student/StudentNotifications';
 import { StudentNotes } from './pages/student/StudentNotes';
-import { StudentForms } from './pages/student/StudentForms';
 
 // Admin Pages
 import { AdminDashboard } from './pages/admin/AdminDashboard';
@@ -151,7 +150,6 @@ export default function App() {
                   <Route path="schedule" element={<StudentSchedule />} />
                   <Route path="notifications" element={<StudentNotifications />} />
                   <Route path="notes" element={<StudentNotes />} />
-                  <Route path="forms" element={<StudentForms />} />
                 </Route>
 
                 {/* Protected Admin Console Routes */}

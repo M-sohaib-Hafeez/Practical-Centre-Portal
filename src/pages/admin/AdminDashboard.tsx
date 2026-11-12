@@ -45,13 +45,13 @@ export const AdminDashboard: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider bg-teal-400/20 text-teal-300 border border-teal-400/30 px-2.5 py-0.5 rounded-full">
               Directorate of Academics & Examination
             </span>
-            <span className="text-xs font-mono text-slate-300">Active Shift: Day (Sec A, A1, A2)</span>
+            <span className="text-xs font-mono text-slate-300">Active Shift: Morning (Sec A, A1, A2)</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
             Administrator Command Console
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-            Logged in: <strong className="text-white">{admin?.name || 'Prof. Rashid Khan'}</strong> ({admin?.campus || 'Gulshan & PECHS Campuses'})
+            Logged in: <strong className="text-white">{admin?.name || 'Prof. Rashid Khan'}</strong> ({admin?.campus || 'Gulshan-e-Iqbal Block 1 Campus'})
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const AdminDashboard: React.FC = () => {
               Enrolled Students
             </span>
             <p className="text-3xl font-black text-slate-900">{totalStudents}</p>
-            <p className="text-xs text-slate-500 font-medium">Both Day & Evening Shifts</p>
+            <p className="text-xs text-slate-500 font-medium">Both Morning & Evening Shifts</p>
           </div>
           <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-900 flex items-center justify-center border border-blue-100">
             <Users className="w-6 h-6" />
@@ -179,7 +179,7 @@ export const AdminDashboard: React.FC = () => {
           </div>
           <h3 className="font-bold text-sm text-slate-900">Broadcast Campus Notice</h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Dispatch announcements with cohort/shift audience targeting (Male, Female, Day, Evening).
+            Dispatch announcements with cohort/shift audience targeting (Male, Female, Morning, Evening).
           </p>
           <span className="text-xs font-bold text-indigo-900 group-hover:underline inline-flex items-center gap-1">
             Compose Broadcast &rarr;
@@ -198,9 +198,9 @@ export const AdminDashboard: React.FC = () => {
 
           <div className="space-y-3 text-xs">
             {[
-              { name: 'Section A1', shift: 'Day', stream: 'Pre-Engineering', count: 48, maleCohort: true },
-              { name: 'Section A2', shift: 'Day', stream: 'Pre-Medical', count: 44, maleCohort: true },
-              { name: 'Section A', shift: 'Day', stream: 'Matric / General Science', count: 38, maleCohort: true },
+              { name: 'Section A1', shift: 'Morning', stream: 'Pre-Engineering', count: 48, maleCohort: true },
+              { name: 'Section A2', shift: 'Morning', stream: 'Pre-Medical', count: 44, maleCohort: true },
+              { name: 'Section A', shift: 'Morning', stream: 'Matric / General Science', count: 38, maleCohort: true },
               { name: 'Section C1', shift: 'Evening', stream: 'Computer Science', count: 42, maleCohort: false },
               { name: 'Section C2', shift: 'Evening', stream: 'Pre-Medical', count: 46, maleCohort: false },
               { name: 'Section C', shift: 'Evening', stream: 'Commerce', count: 32, maleCohort: false },

@@ -45,7 +45,7 @@ export const StudentForms: React.FC = () => {
     sscBoard: 'BIEK Karachi',
     preferredClass: 'Class XII' as ClassLevel,
     preferredStream: 'Pre-Engineering' as StreamType,
-    preferredShift: 'Day' as ShiftType,
+    preferredShift: 'Morning' as ShiftType,
     preferredCampus: 'Gulshan-e-Iqbal Block 1' as CampusLocation,
   });
   const [admissionSubmittedRef, setAdmissionSubmittedRef] = useState<string | null>(null);
@@ -564,7 +564,7 @@ export const StudentForms: React.FC = () => {
                           onChange={(e) => handleAdmissionChange('preferredShift', e.target.value)}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50/50"
                         >
-                          <option value="Day">Day Shift (15:20 – 18:00)</option>
+                          <option value="Morning">Morning Shift (15:20 – 18:00)</option>
                           <option value="Evening">Evening Shift (18:20 – 21:00)</option>
                         </select>
                       </div>
@@ -577,7 +577,6 @@ export const StudentForms: React.FC = () => {
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50/50"
                         >
                           <option value="Gulshan-e-Iqbal Block 1">Gulshan-e-Iqbal Block 1</option>
-                          <option value="PECHS Campus">PECHS Campus</option>
                         </select>
                       </div>
                     </div>

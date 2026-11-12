@@ -114,7 +114,7 @@ export const AdminStudents: React.FC = () => {
   };
 
   // Quick Stats
-  const totalDayStudents = students.filter((s) => s.shift === 'Day').length;
+  const totalDayStudents = students.filter((s) => s.shift === 'Morning').length;
   const totalNightStudents = students.filter((s) => s.shift === 'Evening').length;
 
   return (
@@ -149,7 +149,7 @@ export const AdminStudents: React.FC = () => {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs">
           <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
-            Day Shift Students (Sec A)
+            Morning Shift Students (Sec A)
           </span>
           <p className="text-2xl font-black text-[#0B4F9C] mt-1">{totalDayStudents}</p>
           <span className="text-[11px] text-slate-500">Sections A, A1, A2</span>
@@ -267,7 +267,7 @@ export const AdminStudents: React.FC = () => {
                       <td className="py-3 px-4">
                         <span
                           className={`inline-block px-2 py-0.5 rounded font-mono font-bold text-[11px] border ${
-                            st.shift === 'Day'
+                            st.shift === 'Morning'
                               ? 'bg-blue-50 text-[#0B4F9C] border-blue-200'
                               : 'bg-indigo-50 text-indigo-900 border-indigo-200'
                           }`}
@@ -275,7 +275,7 @@ export const AdminStudents: React.FC = () => {
                           Sec {st.section}
                         </span>
                         <span className="block text-[10px] text-slate-500 mt-0.5">
-                          {st.shift} Shift ({st.shift === 'Day' ? '15:20-18:00' : '18:20-21:00'})
+                          {st.shift} Shift ({st.shift === 'Morning' ? '15:20-18:00' : '18:20-21:00'})
                         </span>
                       </td>
 

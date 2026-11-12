@@ -155,7 +155,7 @@ export const StudentLoginPage: React.FC = () => {
                 <div>
                   <p className="text-xs font-bold text-slate-900">Muhammad Sohaib Hafeez</p>
                   <p className="text-[11px] font-mono text-blue-700">
-                    PC-2026-A1-042 • Day Shift (Male)
+                    PC-2026-A1-042 • Morning Shift (Male)
                   </p>
                 </div>
                 <Copy className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-700" />

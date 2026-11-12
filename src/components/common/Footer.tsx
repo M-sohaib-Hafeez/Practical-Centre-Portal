@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Institute About */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -45,28 +45,7 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Clock className="w-3.5 h-3.5 text-slate-500" />
-                <span>Day Shift: 15:20 – 18:00 (Sections A, A1, A2)</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Column 3: PECHS Campus */}
-          <div className="space-y-3">
-            <div className="flex items-center gap-2 text-white font-bold text-sm">
-              <MapPin className="w-4 h-4 text-teal-400" />
-              <span>PECHS Campus (Block 2)</span>
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Suite 42, Main Sharea Faisal, Block 2 PECHS, Near Nursery Flyover, Karachi.
-            </p>
-            <div className="space-y-1.5 text-xs text-slate-400">
-              <p className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-slate-500" />
-                <span>(021) 3455-7890 / 0321-9876543</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-slate-500" />
-                <span>Evening Shift: 18:20 – 21:00 (Sections C, C1, C2)</span>
+                <span>Morning: 15:20 – 18:00 • Evening: 18:20 – 21:00</span>
               </p>
             </div>
           </div>
@@ -99,8 +78,8 @@ export const Footer: React.FC = () => {
 
             <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
               <p className="text-teal-400 font-semibold">Institutional Cohort Policy:</p>
-              <p>• Male Students: Mon – Wed (Day & Eve)</p>
-              <p>• Female Students: Thu – Sat (Day & Eve)</p>
+              <p>• Male Students: Mon – Wed (Morning & Eve)</p>
+              <p>• Female Students: Thu – Sat (Morning & Eve)</p>
             </div>
           </div>
         </div>

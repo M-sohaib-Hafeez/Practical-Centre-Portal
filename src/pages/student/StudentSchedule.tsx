@@ -44,13 +44,13 @@ export const StudentSchedule: React.FC = () => {
             Cohort: <span className="font-bold text-blue-900">{student.cohort}</span> (
             {student.cohort === 'Male' ? 'Monday to Wednesday' : 'Thursday to Saturday'}) •{' '}
             <span className="font-bold text-teal-700">{student.shift} Shift</span> (
-            {student.shift === 'Day' ? '15:20 – 18:00' : '18:20 – 21:00'})
+            {student.shift === 'Morning' ? '15:20 – 18:00' : '18:20 – 21:00'})
           </p>
         </div>
 
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900 font-semibold self-start sm:self-auto">
           <Clock className="w-4 h-4 text-blue-700" />
-          <span>Cutoff: {student.shift === 'Day' ? '15:40' : '18:40'} (+20m grace)</span>
+          <span>Cutoff: {student.shift === 'Morning' ? '15:40' : '18:40'} (+20m grace)</span>
         </div>
       </div>
 
@@ -85,7 +85,7 @@ export const StudentSchedule: React.FC = () => {
                   <span className="text-xs uppercase font-bold text-teal-300">Cohort Day</span>
                   <h3 className="text-lg font-black tracking-tight">{dayFullNames[dayName]}</h3>
                   <p className="text-xs text-blue-200">
-                    {student.shift === 'Day' ? '15:20 to 18:00' : '18:20 to 21:00'}
+                    {student.shift === 'Morning' ? '15:20 to 18:00' : '18:20 to 21:00'}
                   </p>
                 </div>
 

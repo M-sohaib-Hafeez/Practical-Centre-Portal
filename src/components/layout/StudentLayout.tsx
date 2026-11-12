@@ -11,7 +11,6 @@ import {
   CalendarDays,
   BellRing,
   BookOpen,
-  FileSpreadsheet,
   Users,
   LogOut,
   Menu,
@@ -58,7 +57,6 @@ export const StudentLayout: React.FC = () => {
     { to: '/student/schedule', label: 'Schedule & Upcoming Tests', icon: CalendarDays },
     { to: '/student/notifications', label: 'Notifications', icon: BellRing },
     { to: '/student/notes', label: 'Notes & Study Material', icon: BookOpen },
-    { to: '/student/forms', label: 'Examination & Forms', icon: FileSpreadsheet },
     { to: '/community', label: 'Peer Discussion Forum', icon: Users },
   ];
 
@@ -81,7 +79,7 @@ export const StudentLayout: React.FC = () => {
             </span>
             <span className="text-blue-300">•</span>
             <span className="bg-[#073B75] px-2 py-0.5 rounded text-[11px] font-mono border border-blue-400/40">
-              {student.shift} Shift ({student.shift === 'Day' ? '15:20 – 18:00' : '18:20 – 21:00'})
+              {student.shift} Shift ({student.shift === 'Morning' ? '15:20 – 18:00' : '18:20 – 21:00'})
             </span>
           </div>
 

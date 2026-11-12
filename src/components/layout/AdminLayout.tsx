@@ -65,7 +65,7 @@ export const AdminLayout: React.FC = () => {
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span className="font-semibold text-white">Central Admin Terminal:</span>
-          <span className="text-slate-400">{admin?.campus || 'Gulshan & PECHS Campuses'}</span>
+          <span className="text-slate-400">{admin?.campus || 'Gulshan-e-Iqbal Block 1 Campus'}</span>
           {timeLock.isEmergencyLocked && (
             <span className="bg-rose-500/20 text-rose-300 border border-rose-500/30 px-2 py-0.5 rounded font-bold text-[10px]">
               LOCK ACTIVE
